@@ -1,0 +1,63 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    layout_0: layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "blackberry_keyboard_layout";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w      h       x       y      rot    rx    ry
+            /* 第0行：5个宽按键（w=2） */
+            = <&key_physical_attrs 200    100       0     100        0     0     0>  /* row0, col0 */
+            , <&key_physical_attrs 200    100     200     100        0     0     0>  /* row0, col1 */
+            , <&key_physical_attrs 200    100     400     100        0     0     0>  /* row0, col2 */
+            , <&key_physical_attrs 200    100     600     100        0     0     0>  /* row0, col3 */
+            , <&key_physical_attrs 200    100     800     100        0     0     0>  /* row0, col4 */
+
+            /* 第1行：10个标准按键（默认w=1, h=1） */
+            , <&key_physical_attrs 100    100       0     200        0     0     0>  /* row1, col0 */
+            , <&key_physical_attrs 100    100     100     200        0     0     0>  /* row1, col1 */
+            , <&key_physical_attrs 100    100     200     200        0     0     0>  /* row1, col2 */
+            , <&key_physical_attrs 100    100     300     200        0     0     0>  /* row1, col3 */
+            , <&key_physical_attrs 100    100     400     200        0     0     0>  /* row1, col4 */
+            , <&key_physical_attrs 100    100     500     200        0     0     0>  /* row1, col5 */
+            , <&key_physical_attrs 100    100     600     200        0     0     0>  /* row1, col7（跳过col6） */
+            , <&key_physical_attrs 100    100     700     200        0     0     0>  /* row1, col8 */
+            , <&key_physical_attrs 100    100     800     200        0     0     0>  /* row1, col9 */
+            , <&key_physical_attrs 100    100     900     200        0     0     0>  /* row1, col10 */
+
+            /* 第2行：10个标准按键 */
+            , <&key_physical_attrs 100    100       0     300        0     0     0>  /* row2, col0 */
+            , <&key_physical_attrs 100    100     100     300        0     0     0>  /* row2, col1 */
+            , <&key_physical_attrs 100    100     200     300        0     0     0>  /* row2, col2 */
+            , <&key_physical_attrs 100    100     300     300        0     0     0>  /* row2, col3 */
+            , <&key_physical_attrs 100    100     400     300        0     0     0>  /* row2, col4 */
+            , <&key_physical_attrs 100    100     500     300        0     0     0>  /* row2, col5 */
+            , <&key_physical_attrs 100    100     600     300        0     0     0>  /* row2, col7（跳过col6） */
+            , <&key_physical_attrs 100    100     700     300        0     0     0>  /* row2, col8 */
+            , <&key_physical_attrs 100    100     800     300        0     0     0>  /* row2, col9 */
+            , <&key_physical_attrs 100    100     900     300        0     0     0>  /* row2, col10 */
+
+            /* 第3行：10个标准按键 */
+            , <&key_physical_attrs 100    100       0     400        0     0     0>  /* row3, col0 */
+            , <&key_physical_attrs 100    100     100     400        0     0     0>  /* row3, col1 */
+            , <&key_physical_attrs 100    100     200     400        0     0     0>  /* row3, col2 */
+            , <&key_physical_attrs 100    100     300     400        0     0     0>  /* row3, col3 */
+            , <&key_physical_attrs 100    100     400     400        0     0     0>  /* row3, col4 */
+            , <&key_physical_attrs 100    100     500     400        0     0     0>  /* row3, col5 */
+            , <&key_physical_attrs 100    100     600     400        0     0     0>  /* row3, col7（跳过col6） */
+            , <&key_physical_attrs 100    100     700     400        0     0     0>  /* row3, col8 */
+            , <&key_physical_attrs 100    100     800     400        0     0     0>  /* row3, col9 */
+            , <&key_physical_attrs 100    100     900     400        0     0     0>  /* row3, col10 */
+
+            /* 第4行：5个特殊宽度按键 */
+            , <&key_physical_attrs 120    100     100     500        0     0     0>  /* row4, col2（w=1.2） */
+            , <&key_physical_attrs 120    100     220     500        0     0     0>  /* row4, col4（w=1.2） */
+            , <&key_physical_attrs 320    100     340     500        0     0     0>  /* row4, col5（w=3.2） */
+            , <&key_physical_attrs 120    100     660     500        0     0     0>  /* row4, col7（w=1.2） */
+            , <&key_physical_attrs 120    100     780     500        0     0     0>  /* row4, col8（w=1.2） */
+            ;
+    };
+};

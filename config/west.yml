@@ -1,0 +1,13 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: daliben123
+      url-base: https://github.com/daliben123
+  projects:
+    - name: zmk
+      remote: daliben123
+      revision: bbkeyboard_tp
+      import: app/west.yml
+  self:
+    path: config
