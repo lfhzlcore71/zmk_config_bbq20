@@ -1,4 +1,4 @@
-# Copyright (c) 2023 ZitaoTech
+# Copyright (c) 2025 XixiLee-boom
 # SPDX-License-Identifier: MIT
 
 set(OPENOCD_NRF5_SUBFAMILY nrf52)
