@@ -29,9 +29,9 @@
    behaviors {
         custom_rclk_lgui: custom_rclk_lgui {
             compatible = "zmk,behavior-hold-tap";
-            #binding - cells = <2>;
+            #binding-cells = <2>;
             bindings = <&mkp RCLK>, <&kp LGUI>;
-            tapping - term - ms = <400>;
+            tapping-term-ms = <500>;
         };
     };
 
