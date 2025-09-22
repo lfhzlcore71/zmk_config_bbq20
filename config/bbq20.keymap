@@ -38,12 +38,9 @@
     behaviors {
     win_right_click: win_right_click {
         compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <0>; // 保持固定行为，无需参数
-        bindings = <&kp LGUI>, <&mkp RCLK>; // 单击Win, 长按鼠标右键
-        flavor = "tap-preferred"; // 单击优先，更容易触发单击行为
-        tapping-term-ms = <250>; // 长按判定时间，250ms是常用值
-        quick-tap-ms = <175>; // 快速点击判定时间，有助于区分有意长按和快速单击
-        hold-trigger-key-up = <true>; // 在按键释放时才判定为长按，避免误触发
+        #binding-cells = <2>; 
+        bindings = <&kp LGUI>, <&mkp RCLK>; 
+        tapping-term-ms = <250>; 
     };
 };
 
