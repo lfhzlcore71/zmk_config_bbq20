@@ -36,15 +36,6 @@
     };
 
     behaviors {
-    win_right_click: win_right_click {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>; 
-        bindings = <&kp LGUI>, <&mkp RCLK>; 
-        tapping-term-ms = <250>; 
-    };
-};
-
-    behaviors {
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
