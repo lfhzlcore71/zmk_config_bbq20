@@ -26,15 +26,6 @@
         };
     };
 
-   behaviors {
-        custom_rclk_lgui: custom_rclk_lgui {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mkp RCLK>, <&kp LGUI>;
-            tapping-term-ms = <500>;
-        };
-    };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -43,6 +34,18 @@
             bindings = <&out &kp>;
         };
     };
+
+    behaviors {
+    win_right_click: win_right_click {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <0>; // 保持固定行为，无需参数
+        bindings = <&kp LGUI>, <&mo RIGHT_BUTTON>; // 单击Win, 长按鼠标右键
+        flavor = "tap-preferred"; // 单击优先，更容易触发单击行为
+        tapping-term-ms = <250>; // 长按判定时间，250ms是常用值
+        quick-tap-ms = <175>; // 快速点击判定时间，有助于区分有意长按和快速单击
+        hold-trigger-key-up = <true>; // 在按键释放时才判定为长按，避免误触发
+    };
+};
 
     behaviors {
         bhm: balanced_homerow_mods {
@@ -59,7 +62,7 @@
 
         default_layer {
             bindings = <
-&kp CLCK                &custom_rclk_lgui                   &mkp LCLK                  &mt ESC K_BACK                          &kp TAB
+&kp CLCK                &win_right_click                    &mkp LCLK                  &mt ESC K_BACK                          &kp TAB
 &bhm HASH Q  &bhm N1 W  &bhm N2 E  &bhm N3 R  &bhm LPAR T   &bhm RPAR Y        &bhm UNDER U    &bhm MINUS I        &bhm PLUS O   &bhm AT P
 &bhm STAR A  &bhm N4 S  &bhm N5 D  &bhm N6 F  &bhm SLASH G  &bhm COLON H       &bhm SEMI J     &bhm APOS K         &bhm DQT L    &kp BSPC
 &kp LSHFT    &bhm N7 Z  &bhm N8 X  &bhm N9 C  &bhm QMARK V  &bhm EXCL B        &bhm COMMA N    &bhm DOT M          &kp SEMI      &kp ENTER
